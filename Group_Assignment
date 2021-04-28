@@ -1,0 +1,88 @@
+---
+title: "Group_Assignment"
+author: "Tim"
+date: "28-4-2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r message=FALSE, warning=FALSE, paged.print=FALSE}
+# Install (once) and load the necessary packages:
+# Install (once) and load the necessary packages
+library(jsonlite)
+library(stringr)
+library(arules)
+library(arulesViz)
+library(ggplot2)
+library(reshape2)
+library(e1071)
+library(ROCR)
+library(class)
+library(gdata)
+library(data.table)
+library(plyr)
+library(httr)
+library(stargazer)
+library(dplyr)
+options(scipen = 999)
+
+
+```
+
+
+
+
+```{r}
+# First we load in all the datasets:
+df.SI.all     <- read.csv("Social Index_all.csv")
+df.VI.all     <- read.csv("Safety_all.csv")
+df.FI.obj.all <- read.csv("FI Obj_all.csv")
+df.FI.sub.all <- read.csv("FI Subj_all.csv")
+
+# Inspect the Social Index dataset:
+head(df.SI.all)
+
+f <- c(1:4, 8, 17, 20:22) 
+
+
+df.SI <- subset(df.SI.all, select = f)
+
+# Inspect the newly made dataset:
+head(df.SI)
+
+View(df.SI)
+
+# Change the percentage entries into fraction entries:
+df.SI <- df.SI %>% mutate_each(funs(as.numeric(gsub("%", "", ., fixed = TRUE))/100))
+
+# Remove the column that are not required for the linear regression analysis:
+df.SI <- df.SI[, -c(1:4)]
+
+head(df.SI)
+```
+
+# Turn all 
+df.spam[sapply(df.spam, is.double)] <- 
+  lapply(df.spam[sapply(df.spam, is.double)], as.factor)
+
+
+
+Create the Linear Regression Model
+```{r}
+# First, the target variable and explanatory variables are selected:
+mdlA <- Oordeel.kwaliteit.van.leven ~ .
+
+# Now, the linear regression model is created based based on the selected variables:
+rsltA <- lm(mdlA, data = df.SI)
+
+# The linear regression model can be summarized using:
+stargazer(rsltA,
+          type = "text", 
+          title = "Regression results", 
+          align = TRUE, 
+          no.space = TRUE) 
+
+```
