@@ -6,6 +6,7 @@ df_C = df_A.merge(df_B, how='left', on=['Date'])
 print(df_C)
 
 
+
 ### New Variables ###
 #####################
 import pandas as pd
