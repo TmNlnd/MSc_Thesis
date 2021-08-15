@@ -1,5 +1,10 @@
 # MSc Thesis
-This repository contains the code that was applied in the process of writing my Msc Thesis in Business Information Management. In case of any questions, please contact me. 
+
+This repository contains the code that was applied in the process of writing my Msc Thesis in Business Information Management.
+
+## Description
+
+The purpose of this research is to contribute to the current body of knowledge on the application of convolutional neural networks in the field of stock market index prediction.
 
 ## The repository contains the following folders:
 1. 2D-Models
@@ -9,16 +14,31 @@ This repository contains the code that was applied in the process of writing my 
 5. Dataset
 6. Descriptive Statistics
 
-XXXXXX 2D-Models
-This folders contains 
 
-Sampling V1; Here we sample videos based on channel ids and select them for further analysis, using the YouTube API.
-Sampling V2 (Omitted)
-Statistics Retrieval; Here we use the YouTube API to find video statistics such as like count, age, etc.
-Transcription; Here we first use youtube-dl to download audio tracks which we then transcribe using the IBM Watson Speech to Text api
-Natural Language Processing; Here we define our features and process our data.
-All of the above chapters are also compiled in one complete document, this is the last notebook in repo. The analysis portion of the thesis has not been included since it is completely tailored to my thesis but is available upon request.
+## Getting Started
 
+### Dependencies
 
+* Any application that handles Python.
+* For this study I used Spyder.
 
-Work conducted for my MSc Thesis 
+### Installing
+
+* I recommend to download all folders. Otherwise, code snippets can be run individually.
+* No modifications are needed to the files/folders. The code can run with the current set up.
+
+### Executing Code
+
+* Set the correct working directory.
+* To test the Models using 82 features, use the code in the 82 Features folder.
+* To test the Models using 92 features, use the code in the 92 Features folder.
+* Load the needed libraries and packages.
+* Select the entire code belonging to one model.
+* Run the code till after the following code block
+```
+# Run the CNN2pred-model
+run_cnn(data_warehouse, order_stocks)
+```
+
+## Help
+In case of any questions, please contact me. 
