@@ -9,7 +9,7 @@ This repository contains the code that was applied in the process of writing my 
 5. Dataset
 6. Descriptive Statistics
 
-XXXXX 2D-Models
+XXXXXX 2D-Models
 This folders contains 
 
 Sampling V1; Here we sample videos based on channel ids and select them for further analysis, using the YouTube API.
