@@ -1,7 +1,7 @@
 # MSc Thesis
 This repository contains the code that was applied in the process of writing my Msc Thesis in Business Information Management. In case of any questions, please contact me. 
 
-##The repository contains the following folders:
+## The repository contains the following folders:
 - 2D-Models
 - 82 Features
 - 92 Features
