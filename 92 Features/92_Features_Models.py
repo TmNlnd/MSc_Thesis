@@ -981,3 +981,7 @@ f1_score(test_target, model_prediction, average='macro')*100
 
 # Confirm in the report overview
 classification_report(test_target, model_prediction, digits=4)
+
+
+
+
