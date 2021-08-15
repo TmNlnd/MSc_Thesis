@@ -2,14 +2,15 @@
 This repository contains the code that was applied in the process of writing my Msc Thesis in Business Information Management. In case of any questions, please contact me. 
 
 ## The repository contains the following folders:
-- 2D-Models
-- 82 Features
-- 92 Features
-- Construction Technical Indicators
-- Dataset
-- Descriptive Statistics
+1. 2D-Models
+2. 82 Features
+3. 92 Features
+4. Construction Technical Indicators
+5. Dataset
+6. Descriptive Statistics
 
-
+XXXXX 2D-Models
+This folders contains 
 
 Sampling V1; Here we sample videos based on channel ids and select them for further analysis, using the YouTube API.
 Sampling V2 (Omitted)
